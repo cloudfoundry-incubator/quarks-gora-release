@@ -1,0 +1,5 @@
+check process quarks-gora
+  with pidfile /var/vcap/sys/run/bpm/quarks-gora/quarks-gora.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start quarks-gora"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop quarks-gora"
+  group vcap
