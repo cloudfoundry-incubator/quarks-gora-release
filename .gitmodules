@@ -1,0 +1,3 @@
+[submodule "src/code.cloudfoundry.org/quarks-gora"]
+	path = src/code.cloudfoundry.org/quarks-gora
+	url = https://github.com/cloudfoundry-incubator/quarks-gora.git

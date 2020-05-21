@@ -1,0 +1,21 @@
+---
+name: quarks-gora
+
+templates:
+  bpm.yml.erb: config/bpm.yml
+  cert.erb: config/cert
+  key.erb: config/key
+
+packages:
+  - quarks-gora
+
+properties:
+  quarks-gora.port:
+    default: 4443
+    description: "Quarks-gora listening port."
+  quarks-gora.cert:
+    default: ""
+    description: "The quarks-gora cert."
+  quarks-gora.key:
+    default: ""
+    description: "The private key of the certificate."

@@ -1,0 +1,7 @@
+---
+final_name: quarks-gora
+blobstore:
+  provider: s3
+  options:
+    bucket_name: quarks-gora-dependencies
+    region: eu-central-1
