@@ -1,0 +1,13 @@
+processes:
+  - name: smoke-tests
+    executable: /var/vcap/packages/quarks-gora/bin/quarks-gora-smoke
+    args: []
+    env:
+      PORT: "<%= p("quarks-gora.client.port") %>"
+      SERVER_CRT: "/var/vcap/jobs/quarks-gora/config/client_tls/certificate.crt"
+      <% if_link("quarks-gora") do |gora| -%>
+      SSL: "<%= gora.p("quarks-gora.ssl") %>
+      <% else -%>
+      SSL: "<%= p("quarks-gora.client.ssl") %>"
+      <% end -%>
+      ADDRESS: "<%= p("quarks-gora.client.host") %>"

@@ -1,0 +1,32 @@
+---
+name: smoke-tests
+
+description: "The smoke tests errand run a simple check that Gora is accessible and works properly"
+
+templates:
+  run: bin/run
+  bpm.yml.erb: config/bpm.yml
+
+  cert.erb: config/client_tls/certificate.crt
+
+packages:
+  - quarks-gora
+
+consumes:
+- name: quarks-gora
+  type: quarks-gora
+  optional: true
+
+properties:
+#  quarks-gora.client.cert:
+#    default: ""
+#    description: "The quarks-gora cert."
+  quarks-gora.client.host:
+    default: ""
+    description: "Quarks-gora hostname"
+  quarks-gora.client.port:
+    default: ""
+    description: "Quarks-gora port"
+  quarks-gora.client.ssl:
+    default: "false"
+    description: "Enable Gora via SSL/TLS"
