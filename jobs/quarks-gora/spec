@@ -19,3 +19,6 @@ properties:
   quarks-gora.key:
     default: ""
     description: "The private key of the certificate."
+  quarks-gora.ssl:
+    default: "false"
+    description: "Enable Gora via SSL/TLS"

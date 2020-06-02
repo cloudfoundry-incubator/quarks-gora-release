@@ -12,3 +12,7 @@ export GOCACHE="${GOROOT}/cache"
 pushd ${BOSH_INSTALL_TARGET}/src/code.cloudfoundry.org/quarks-gora
   go build -o ${BOSH_INSTALL_TARGET}/bin/quarks-gora
 popd
+
+cp -rfv ${BOSH_INSTALL_TARGET}/src/code.cloudfoundry.org/quarks-gora/scripts/smoke.sh  ${BOSH_INSTALL_TARGET}/bin/quarks-gora-smoke
+
+chmod +x ${BOSH_INSTALL_TARGET}/bin/quarks-gora-smoke

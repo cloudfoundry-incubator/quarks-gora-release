@@ -6,3 +6,4 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/quarks-gora/**/*.go
+  - code.cloudfoundry.org/quarks-gora/scripts/*.sh
