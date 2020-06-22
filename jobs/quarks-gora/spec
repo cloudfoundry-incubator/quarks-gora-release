@@ -9,6 +9,14 @@ templates:
 packages:
   - quarks-gora
 
+provides:
+- name: quarks-gora
+  type: quarks-gora
+  properties:
+  - quarks-gora.port
+  - quarks-gora.cert
+  - quarks-gora.ssl
+
 properties:
   quarks-gora.port:
     default: 4443
@@ -22,3 +30,6 @@ properties:
   quarks-gora.ssl:
     default: "false"
     description: "Enable Gora via SSL/TLS"
+  text_message:
+    default: ""
+    description: "A text message which is set in the environment"

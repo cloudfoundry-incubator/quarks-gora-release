@@ -18,9 +18,6 @@ consumes:
   optional: true
 
 properties:
-#  quarks-gora.client.cert:
-#    default: ""
-#    description: "The quarks-gora cert."
   quarks-gora.client.host:
     default: ""
     description: "Quarks-gora hostname"
@@ -29,4 +26,4 @@ properties:
     description: "Quarks-gora port"
   quarks-gora.client.ssl:
     default: "false"
-    description: "Enable Gora via SSL/TLS"
+    description: "Enable connection to Gora via SSL/TLS"
