@@ -18,6 +18,19 @@ consumes:
   optional: true
 
 properties:
+  quarks-gora.host:
+    default: ""
+    description: "Quarks-gora hostname"
+  quarks-gora.port:
+    default: 4443
+    description: "Quarks-gora listening port."
+  quarks-gora.ssl:
+    default: "false"
+    description: "Enable Gora via SSL/TLS"
+  text_message:
+    default: ""
+    description: "A text message which is set in the environment"
+
   quarks-gora.client.host:
     default: ""
     description: "Quarks-gora hostname"
