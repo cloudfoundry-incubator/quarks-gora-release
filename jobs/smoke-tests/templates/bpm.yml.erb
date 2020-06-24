@@ -1,13 +1,28 @@
+<%
+  host = p("quarks-gora.client.host")
+  port = p("quarks-gora.client.port")
+  ssl = p("quarks-gora.client.ssl")
+  if_link("quarks-gora") do |gora|
+    unless host
+      gora.if_p("quarks-gora.host") do |h|
+        host = h
+      end
+    end
+    unless host
+      host = gora.instances.map(&:address).sample
+    end
+
+    port = gora.p("quarks-gora.port")
+    ssl = gora.p("quarks-gora.ssl")
+  end
+%>
+
 processes:
   - name: smoke-tests
     executable: /var/vcap/packages/quarks-gora/bin/quarks-gora-smoke
     args: []
     env:
-      PORT: "<%= p("quarks-gora.client.port") %>"
+      PORT: "<%= port %>"
       SERVER_CRT: "/var/vcap/jobs/quarks-gora/config/client_tls/certificate.crt"
-      <% if_link("quarks-gora") do |gora| -%>
-      SSL: "<%= gora.p("quarks-gora.ssl") %>
-      <% else -%>
-      SSL: "<%= p("quarks-gora.client.ssl") %>"
-      <% end -%>
-      ADDRESS: "<%= p("quarks-gora.client.host") %>"
+      SSL: "<%= ssl %>"
+      ADDRESS: "<%= host %>"
