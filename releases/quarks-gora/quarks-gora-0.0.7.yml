@@ -1,0 +1,29 @@
+name: quarks-gora
+version: 0.0.7
+commit_hash: 0f42ff4
+uncommitted_changes: false
+jobs:
+- name: quarks-gora
+  version: beebb0042bf7177bb85fb93bd8e67be8f4a7cdc8
+  fingerprint: beebb0042bf7177bb85fb93bd8e67be8f4a7cdc8
+  sha1: f6a7a5b01b0c2b3ca9bbdd023f81159a25d1a6f7
+- name: smoke-tests
+  version: eb167e56a3ca11b588c89b453700962dddcd6afc
+  fingerprint: eb167e56a3ca11b588c89b453700962dddcd6afc
+  sha1: 04704a1f3b838e89de2b79bcae28a263e9660e3f
+packages:
+- name: golang
+  version: 98c37e2b3a2dab07f83924c614c4207efce0e55c
+  fingerprint: 98c37e2b3a2dab07f83924c614c4207efce0e55c
+  sha1: 9e9803c59e878741cd3b912aed5e7e938d7d8508
+  dependencies: []
+- name: quarks-gora
+  version: d93f826d6fe8c3f12bc68a67c52ce3be043cb191
+  fingerprint: d93f826d6fe8c3f12bc68a67c52ce3be043cb191
+  sha1: d3ecf17ac439e7c8557ad8364bb9957d22aebadc
+  dependencies:
+  - golang
+license:
+  version: b9a691080a3b1ce73179508d1b8a6e684fcb473e
+  fingerprint: b9a691080a3b1ce73179508d1b8a6e684fcb473e
+  sha1: be590330527b952629eb09623e479ae4d57be0db
