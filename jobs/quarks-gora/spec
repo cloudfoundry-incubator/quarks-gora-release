@@ -16,6 +16,11 @@ provides:
   - quarks-gora.port
   - quarks-gora.cert
   - quarks-gora.ssl
+- name: quarks_gora
+  type: quarks-gora
+  properties:
+  - text_message
+
 
 properties:
   quarks-gora.port:
