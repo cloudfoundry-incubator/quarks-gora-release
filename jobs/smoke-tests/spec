@@ -16,6 +16,9 @@ consumes:
 - name: quarks-gora
   type: quarks-gora
   optional: true
+- name: quarks_gora
+  type: quarks-gora
+  optional: true
 
 properties:
   quarks-gora.host:
