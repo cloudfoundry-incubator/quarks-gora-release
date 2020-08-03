@@ -43,6 +43,3 @@ properties:
   quarks-gora.client.ssl:
     default: "false"
     description: "Enable connection to Gora via SSL/TLS"
-  quarks-gora.client.certificate:
-    default: ""
-    description: "Certificate to connect to Gora via SSL/TLS"
