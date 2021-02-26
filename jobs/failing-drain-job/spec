@@ -3,7 +3,7 @@ name: failing-drain-job
 
 templates:
   bpm.erb.yml: config/bpm.yml
-  drain.sh: bin/drain/drain.sh
+  drain.sh: bin/drain
   run.sh: bin/run
 
 packages: []
